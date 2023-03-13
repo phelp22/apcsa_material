@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class MyLinkedList{
+public class MyLinkedList {
 
   private Node head;
 
@@ -31,6 +31,7 @@ public class MyLinkedList{
       counter++;
       walker = walker.getNext();
     }
+    return "";
   }
 
   /* Return the list as a string */
@@ -84,6 +85,7 @@ public class MyLinkedList{
       counter++;
       walker = walker.getNext();
     }
+    return 0;
   }
 
 
