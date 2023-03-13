@@ -89,7 +89,7 @@ public class MyLinkedList {
       counter++;
       walker = walker.getNext();
     }
-    return 0;
+    return -1;
   }
 
 
