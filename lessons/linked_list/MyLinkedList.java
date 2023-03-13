@@ -20,17 +20,16 @@ public class MyLinkedList{
 
   /* Returns the value in the node at location index. */
   public String get(int index){
-    
     // Create a reference to head. It will help loop through the list
     Node walker = head;
     // Counter to track a node position
     int counter = 0;
     while (walker != null) {
       if (counter == index) {
-        return walker.data;
+        return walker.getData();
       }
       counter++;
-      walker = walker.next;
+      walker = walker.getNext;
     }
   }
 
@@ -40,8 +39,8 @@ public class MyLinkedList{
     Node walker = head;
     String LinkedList = "";
     while (walker != null) {
-      LinkedList += " " + walker.data;
-      walker = walker.next;
+      LinkedList += " " + walker.getData;
+      walker = walker.getNext;
     } 
     return LinkedList;
   }
@@ -54,7 +53,7 @@ public class MyLinkedList{
     int size = 1;
     while (walker != null) {
       counter++;
-      walker = walker.next;
+      walker = walker.getNext();
     }
     return size;
   }
@@ -63,15 +62,15 @@ public class MyLinkedList{
   /*Adds a new node which contains value at index */
   public void add(int index, String value){
     Node walker = new Node(value);
-    walker.next = head;
+    walker.setNext(head);
     for (i = 0; i < index; i++) {
-      walker = walker.next;
+      walker = walker.getNext();
     }
     
     Node NewNode = new Node(value);
     NewNode.setNext(walker.next);
-    node.next = walker.next;
-    walker.next = node;
+    node.setNext(walker.getNext);
+    walker.setNext(NewNode);
   }
 
 
@@ -80,11 +79,11 @@ public class MyLinkedList{
     Node walker = head;
     counter = 0;
     while (walker != null) {
-      if (walker.data == value) {
+      if (walker.getData() == value) {
         return counter;
       }
       counter++;
-      walker = walker.next;
+      walker = walker.getNext();
     }
   }
 
@@ -93,16 +92,16 @@ public class MyLinkedList{
 
   public void remove(int index){
     Node walker = head; 
-    if (head != null && head.next.next != null) {
+    if (head != null && head.getNext().getNext() != null) {
       for (int i = 0; i <= index; i++) {
         if (i == index - 1) {
           Node previous = walker;
-          Node after = walker.next.next;
-          previous.next = after;
+          Node after = walker.getNext().getNext();
+          previous.setNext(after);
         }
       }
     }
-    if (head.next.next == null) {
+    if (head.getNext().getNext() == null) {
       head = null; 
     }
   }
