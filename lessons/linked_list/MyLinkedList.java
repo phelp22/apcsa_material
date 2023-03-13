@@ -40,7 +40,7 @@ public class MyLinkedList {
     Node walker = head;
     String LinkedList = "";
     while (walker != null) {
-      LinkedList += " " + walker.getData();
+      LinkedList += walker.getData() + " ";
       walker = walker.getNext();
     } 
     return LinkedList;
@@ -67,7 +67,6 @@ public class MyLinkedList {
     for (int i = 0; i < index; i++) {
       walker = walker.getNext();
     }
-    
     Node NewNode = new Node(value);
     NewNode.setNext(walker.getNext());
     walker.setNext(NewNode);
@@ -92,18 +91,22 @@ public class MyLinkedList {
   /* Remove node al location index */
 
   public void remove(int index){
-    Node walker = head; 
-    if (head != null && head.getNext().getNext() != null) {
-      for (int i = 0; i <= index; i++) {
-        if (i == index - 1) {
-          Node previous = walker;
-          Node after = walker.getNext().getNext();
-          previous.setNext(after);
+    Node walker = head;
+    if (head.getNext().getNext() == null) {
+        walker.setNext(null);
+    } 
+    else if (head != null) {
+      if (index == 0) {
+      	head = walker.getNext();
+      }
+      else {
+        for (int i = 0; i < index; i++) {
+          if (i == index - 1) {
+            walker.setNext(walker.getNext().getNext());
+          }
+          walker = walker.getNext();
         }
       }
-    }
-    if (head.getNext().getNext() == null) {
-      head = null; 
-    }
+    }  
   }
 }
