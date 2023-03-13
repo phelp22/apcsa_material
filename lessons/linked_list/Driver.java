@@ -11,8 +11,14 @@ public class Driver{
     myList.add("d");
     myList.add("e");
     System.out.println(myList.get(2));
+    System.out.println(myList.get(0));
+    System.out.println(myList.get(4));
     System.out.println(myList.size());
     myList.add(3, "f");
+    System.out.println(myList);
+    myList.add(0, "g");
+    System.out.println(myList);
+    myList.add(7, "h");
     System.out.println(myList);
     myList.remove(2);
     System.out.println(myList);

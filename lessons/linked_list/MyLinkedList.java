@@ -64,12 +64,17 @@ public class MyLinkedList {
   public void add(int index, String value){
     Node walker = new Node(value);
     walker.setNext(head);
-    for (int i = 0; i < index; i++) {
-      walker = walker.getNext();
+    if (index == 0) {
+      add(value);
     }
-    Node NewNode = new Node(value);
-    NewNode.setNext(walker.getNext());
-    walker.setNext(NewNode);
+    else {
+      for (int i = 0; i < index; i++) {
+        walker = walker.getNext();
+      }
+      Node NewNode = new Node(value);
+      NewNode.setNext(walker.getNext());
+      walker.setNext(NewNode);
+    }
   }
 
 
