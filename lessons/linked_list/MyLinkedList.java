@@ -29,7 +29,7 @@ public class MyLinkedList{
         return walker.getData();
       }
       counter++;
-      walker = walker.getNext;
+      walker = walker.getNext();
     }
   }
 
@@ -39,8 +39,8 @@ public class MyLinkedList{
     Node walker = head;
     String LinkedList = "";
     while (walker != null) {
-      LinkedList += " " + walker.getData;
-      walker = walker.getNext;
+      LinkedList += " " + walker.getData();
+      walker = walker.getNext();
     } 
     return LinkedList;
   }
@@ -52,7 +52,7 @@ public class MyLinkedList{
     // Counter to track a node position
     int size = 1;
     while (walker != null) {
-      counter++;
+      size++;
       walker = walker.getNext();
     }
     return size;
@@ -63,13 +63,12 @@ public class MyLinkedList{
   public void add(int index, String value){
     Node walker = new Node(value);
     walker.setNext(head);
-    for (i = 0; i < index; i++) {
+    for (int i = 0; i < index; i++) {
       walker = walker.getNext();
     }
     
     Node NewNode = new Node(value);
-    NewNode.setNext(walker.next);
-    node.setNext(walker.getNext);
+    NewNode.setNext(walker.getNext());
     walker.setNext(NewNode);
   }
 
@@ -77,7 +76,7 @@ public class MyLinkedList{
   /* Returns the index of the first node in the list that contains value. */
   public int indexOf(String value){
     Node walker = head;
-    counter = 0;
+    int counter = 0;
     while (walker != null) {
       if (walker.getData() == value) {
         return counter;
