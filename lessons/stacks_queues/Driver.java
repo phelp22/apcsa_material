@@ -3,6 +3,7 @@ public class Driver {
     Stack NewStack = new Stack();
     NewStack.push(1);
     NewStack.push(2);
+    System.out.println(NewStack);
     NewStack.push(3);
     NewStack.push(4);
     NewStack.push(5);
