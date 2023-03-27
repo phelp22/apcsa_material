@@ -4,21 +4,38 @@ public class Stack{
   
   // Instance variables here
   private Node tail;
+  private Node head;
  // COnstructor
-  public Stack(){
-    tail.setNext(null);
+  public Stack() {
+    head = null;
+    tail = null;
   }   
 
   // Add element to stack
   public void push(int value){
-    node NewNode = new Node();
-    
-    
+    if (isEmpty() == true) {
+      head.setData(value);
+      tail.setData(value);
+    }
+    if (size() == 1) {
+      node NewNode = new Node(value);
+      head.setNext(NewNode);
+      tail = NewNode;
+    }
+    else {
+      node NewNode = new Node(value);
+      tail.setNext(NewNode);
+      tail = NewNode;
+    }
   }
 
   // Remove element from stack  
   public int pop(){
-
+    if (isEmpty == false) {
+      Node walker = head;
+      if (
+      
+    }
   }
 
   // Get top element
