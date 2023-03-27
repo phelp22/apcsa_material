@@ -45,7 +45,7 @@ public class Stack{
     else return -1;
   }
 
-  // Get top element
+  // Get top element 
   public int top(){
     return tail.getData();
   }
@@ -59,9 +59,9 @@ public class Stack{
   // Return size stack
   public int size(){
     if (isEmpty() == false) {
-      int counter = 0;
+      int counter = 1;
       Node walker = head;
-        while (walker.getNext() != null) {
+        while (walker != null) {
           walker = walker.getNext();
           counter++;
         }
