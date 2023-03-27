@@ -58,7 +58,7 @@ public class Stack{
     if (isEmpty() == false) {
       int counter = 0;
       Node walker = head;
-        while (head.getNext() != null) {
+        while (walker.getNext() != null) {
           walker = walker.getNext();
           counter++;
         }
