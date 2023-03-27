@@ -8,14 +8,14 @@ public class Stack{
  // COnstructor
   public Stack() {
     head = null;
-    tail = null;
   }   
 
   // Add element to stack
   public void push(int value){
     if (isEmpty() == true) {
-      head.setData(value);
-      tail.setData(value);
+      Node NewNode = new Node(value);
+      head = NewNode;
+      tail = NewNode;
     }
     else if (size() == 1) {
       Node NewNode = new Node(value);
