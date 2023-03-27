@@ -49,19 +49,22 @@ public class Stack{
 
   // Check is stack empty
   public boolean isEmpty(){
-    if (size() == 0) return true;
+    if (head == null) return true;
     else return false;
   }
 
   // Return size stack
   public int size(){
-    int counter = 0;
-    Node walker = head;
-      while (head.getNext() != null) {
-        walker = walker.getNext();
-        counter++;
-      }
-    return counter;
+    if (isEmpty() == false) {
+      int counter = 0;
+      Node walker = head;
+        while (head.getNext() != null) {
+          walker = walker.getNext();
+          counter++;
+        }
+      return counter;
+    }
+    else return 0;
   }
 
   // Print stack
