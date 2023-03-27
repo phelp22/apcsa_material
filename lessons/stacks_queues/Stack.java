@@ -37,7 +37,7 @@ public class Stack{
         walker = walker.getNext();
       }
       tail = walker; 
-      return walker.getNext.getData(); 
+      return walker.getData(); 
     }
     else return -1;
   }
