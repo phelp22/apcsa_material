@@ -18,12 +18,12 @@ public class Stack{
       tail.setData(value);
     }
     else if (size() == 1) {
-      node NewNode = new Node(value);
+      Node NewNode = new Node(value);
       head.setNext(NewNode);
       tail = NewNode;
     }
     else {
-      node NewNode = new Node(value);
+      Node NewNode = new Node(value);
       tail.setNext(NewNode);
       tail = NewNode;
     }
@@ -31,13 +31,13 @@ public class Stack{
 
   // Remove element from stack  
   public int pop(){
-    if (isEmpty == false) {
+    if (isEmpty() == false) {
       Node walker = head;
       while (head.getNext() != null) {
         walker = walker.getNext();
       }
       tail = walker; 
-      return walker.getNext(); 
+      return walker.getNext.getData(); 
     }
     else return -1;
   }
