@@ -6,6 +6,7 @@ public class Driver {
     NewStack.push(3);
     NewStack.push(4);
     NewStack.push(5);
+    System.out.println(NewStack.size());
     System.out.println(NewStack);
   }
 }
