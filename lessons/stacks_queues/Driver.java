@@ -1,10 +1,11 @@
 public class Driver {
   public static void main (String[] args) {
     Stack NewStack = new Stack();
-    myList.push(1);
-    myList.push(2);
-    myList.push(3);
-    myList.push(4);
-    myList.push(5);
+    NewStack.push(1);
+    NewStack.push(2);
+    NewStack.push(3);
+    NewStack.push(4);
+    NewStack.push(5);
+    System.out.println(NewStack);
   }
 }
