@@ -42,6 +42,7 @@ public class Queue{
   // Dequeue a value from the queue
   public int dequeue(){
     head = head.getNext();
+    return head;
   }
 
   // Return the front/top
