@@ -19,7 +19,7 @@ public class Stack{
       System.out.println("EMPTY");
     }
     else if (size() == 1) {
-      Node NewNode = new Node(value, );
+      Node NewNode = new Node(value);
       head.setNext(NewNode);
       tail = NewNode;
       System.out.println("1");
