@@ -10,7 +10,7 @@ public class Driver {
     NewStack.push(5);
     System.out.println(NewStack.size());
     System.out.println(NewStack);
-    NewStack.pop();
+    System.out.println(NewStack.pop());
     System.out.println(NewStack);
     System.out.println(NewStack.size());
     System.out.println(NewStack.top());
