@@ -19,7 +19,7 @@ public class Stack{
       System.out.println("EMPTY");
     }
     else if (size() == 1) {
-      Node NewNode = new Node(value);
+      Node NewNode = new Node(value, );
       head.setNext(NewNode);
       tail = NewNode;
       System.out.println("1");
@@ -59,7 +59,7 @@ public class Stack{
   // Return size stack
   public int size(){
     if (isEmpty() == false) {
-      int counter = 1;
+      int counter = 0;
       Node walker = head;
         while (walker != null) {
           walker = walker.getNext();
