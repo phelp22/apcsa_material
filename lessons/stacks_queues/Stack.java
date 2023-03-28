@@ -36,12 +36,13 @@ public class Stack{
   public int pop(){
     if (isEmpty() == false) {
       Node walker = head;
+      top = top();
       while (walker.getNext().getNext() != null) {
         walker = walker.getNext();
       }
       tail = walker; 
       tail.setNext(null);
-      return walker.getData(); 
+      return top; 
     }
     else return -1;
   }
