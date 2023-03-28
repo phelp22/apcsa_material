@@ -25,6 +25,7 @@ public class Stack{
     else {
       Node NewNode = new Node(value);
       tail.setNext(NewNode);
+      tail = NewNode;
     }
   }
 
