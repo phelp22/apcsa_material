@@ -13,7 +13,7 @@ public class Driver {
     System.out.println(NewStack.size());
     System.out.println(NewStack.top());
     
-    Stack NewQueue = new Queue();
+    Queue NewQueue = new Queue();
     NewQueue.enqueue(1);
     NewQueue.enqueue(2);
     NewQueue.enqueue(3);
