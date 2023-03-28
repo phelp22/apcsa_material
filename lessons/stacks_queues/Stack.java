@@ -36,7 +36,7 @@ public class Stack{
   public int pop(){
     if (isEmpty() == false) {
       Node walker = head;
-      top = top();
+      int top = top();
       while (walker.getNext().getNext() != null) {
         walker = walker.getNext();
       }
