@@ -36,10 +36,11 @@ public class Stack{
   public int pop(){
     if (isEmpty() == false) {
       Node walker = head;
-      while (walker.getNext() != null) {
+      while (walker.getNext().getNext() != null) {
         walker = walker.getNext();
       }
       tail = walker; 
+      tail.setNext(null);
       return walker.getData(); 
     }
     else return -1;
@@ -75,7 +76,7 @@ public class Stack{
     String accumulator = "";
     Node walker = head;
     for (int i = 0; i < size(); i++) {
-      accumulator += walker.getData() + ",";
+      accumulator += walker.getData() + " ";
       walker = walker.getNext();
     }
     return accumulator;
