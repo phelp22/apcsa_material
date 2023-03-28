@@ -5,7 +5,7 @@ public class Stack{
   // Instance variables here
   private Node tail;
   private Node head;
- // COnstructor
+  // Constructor
   public Stack() {
     head = null;
   }   
@@ -16,19 +16,15 @@ public class Stack{
       Node NewNode = new Node(value);
       head = NewNode;
       tail = NewNode;
-      System.out.println("EMPTY");
     }
     else if (size() == 1) {
       Node NewNode = new Node(value);
       head.setNext(NewNode);
       tail = NewNode;
-      System.out.println("1");
     }
     else {
       Node NewNode = new Node(value);
       tail.setNext(NewNode);
-      tail = NewNode;
-      System.out.println("MORE THAN 1");
     }
   }
 
