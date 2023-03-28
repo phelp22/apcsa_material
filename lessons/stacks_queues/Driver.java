@@ -14,19 +14,19 @@ public class Driver {
     System.out.println(NewStack.top());
     
     Stack NewQueue = new Queue();
-    NewStack.enqueue(1);
-    NewStack.enqueue(2);
-    NewStack.enqueue(3);
-    NewStack.enqueue(4);
+    NewQueue.enqueue(1);
+    NewQueue.enqueue(2);
+    NewQueue.enqueue(3);
+    NewQueue.enqueue(4);
     NewStack.enqueue(5);
-    NewStack.enqueue(6);
-    NewStack.enqueue(7);
-    System.out.println(NewStack.size());
-    System.out.println(NewStack.front());
-    System.out.println(NewStack);
-    NewStack.dequeue();
-    System.out.println(NewStack.size());
-    System.out.println(NewStack.front());
-    System.out.println(NewStack);
+    NewQueue.enqueue(6);
+    NewQueue.enqueue(7);
+    System.out.println(NewQueue.size());
+    System.out.println(NewQueue.front());
+    System.out.println(NewQueue);
+    NewQueue.dequeue();
+    System.out.println(NewQueue.size());
+    System.out.println(NewQueue.front());
+    System.out.println(NewQueue);
   }
 }
