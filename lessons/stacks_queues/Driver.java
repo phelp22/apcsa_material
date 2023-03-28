@@ -18,7 +18,7 @@ public class Driver {
     NewQueue.enqueue(2);
     NewQueue.enqueue(3);
     NewQueue.enqueue(4);
-    NewStack.enqueue(5);
+    NewQueue.enqueue(5);
     NewQueue.enqueue(6);
     NewQueue.enqueue(7);
     System.out.println(NewQueue.size());
