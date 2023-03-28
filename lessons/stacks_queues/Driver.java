@@ -12,5 +12,7 @@ public class Driver {
     System.out.println(NewStack);
     NewStack.pop(2);
     System.out.println(NewStack);
+    System.out.println(NewStack.size());
+    System.out.println(NewStack.top());
   }
 }
