@@ -75,7 +75,7 @@ public class Stack{
     String accumulator = "";
     Node walker = head;
     for (int i = 0; i < size(); i++) {
-      accumulator += walker.getData();
+      accumulator += walker.getData() + ",";
       walker = walker.getNext();
     }
     return accumulator;
