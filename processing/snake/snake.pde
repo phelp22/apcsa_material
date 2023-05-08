@@ -8,14 +8,17 @@
  *     The snake grows when eat food
  *     The speed increases when the snake grows
  *     Food is displayed randomly
+ *     Food and parts of the snake body are squares
  */
 
 // global variables
 ArrayList<PVector> snake = new ArrayList<PVector>(); // snake body (not included the head)
 PVector pos; // snake position (position of the head)
+
 StringList mode_list = new StringList(new String[] {"border", "no_border"}); // if you implement both functionalities
 int mode_pos = 1; // mode 1 by default - if hits wall wraps around
 String actual_mode = mode_list.get(mode_pos); // current mode name
+
 PVector food; // food position
 
 PVector dir = new PVector(0, 0); // snake direction (up, down, left right)
@@ -65,18 +68,18 @@ void drawSnake() {
 }
 
 void updateSnake() {
-  //Add current position to snake ArrayList
+  // Add current position(head) to snake ArrayList
   
-  //Check the size of snake. Remove some items from snake ArrayList if needed
+  // Check the size of snake. Remove some items from snake ArrayList if needed
   
-  //Calculate new position of snake (head)
+  // Calculate new position of snake (head). You must use the direction vector for this calculation
   
-  //If snake (head) hits food, add +1 to the snake size and create a new food
+  // If snake (head) hits food, add +1 to the snake size and create a new food
   
-  //If snake (head) eat itself, gameover, reset()
+  // If snake (head) eat itself, gameover, reset()
   
-  //If mode 'no_border', snake is out of screen, wraps around
-  //If mode 'border', when snake hit a border, gameover, reset()
+  // If mode 'no_border', snake is out of screen, wraps around
+  // If mode 'border', when snake hit a border, gameover, reset()
   
 }
 
@@ -95,8 +98,14 @@ void keyPressed() {
   // UP (0, -1)
   // DOWN(0, 1)
   // LEFT(-1,0)
- // RIGHT(1,0)
-  // if '+' is pressed, increase the size of the squares (and recalculate w and h)
-  // same thing for '-'
-  // when 'm' is pressed, change the mode -> ONLY IF YOU IMPLEMENT BOTH MODES
+  // RIGHT(1,0)
+  
 }
+
+// EXTRA FOR STUDENTS WHO FINISH WITH THE REQUIRED TASKS
+// if '+' is pressed, increase the size of the squares (and recalculate w and h)
+// same thing for '-'
+// when 'm' is pressed, change the mode -> ONLY IF YOU IMPLEMENT BOTH MODES
+// add colors: 
+//     1. make the food colorful and when the snake eats the food, it adopts that color
+//     2. make the backgroud looks like a grid adding colors
